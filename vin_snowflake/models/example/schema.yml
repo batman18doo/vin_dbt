@@ -1,6 +1,8 @@
 
 version: 2
 
+
+
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
@@ -24,8 +26,10 @@ models:
       columns:
           - name: nation
             tests:
-              - unique
               - not_null
-              - accepted_values:
-                  values: [12,10]
-                  quote: false
+
+    - name: data_snowflake
+      columns:
+        - name: CC_OPEN_DATE_SK
+          tests:
+             - not_null
