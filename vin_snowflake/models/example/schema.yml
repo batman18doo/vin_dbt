@@ -30,6 +30,13 @@ models:
 
     - name: data_snowflake
       columns:
-        - name: CC_OPEN_DATE_SK
-          tests:
-             - not_null
+          - name: CC_OPEN_DATE_SK
+            tests:
+              - not_null
+
+    - name: dates
+      columns:
+          - name: d_date
+            tests:
+              - unique
+              - not_null
